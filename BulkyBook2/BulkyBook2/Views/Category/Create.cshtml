@@ -1,0 +1,34 @@
+﻿@model BulkyBook2.Models.Category
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Create Category</h4>
+<hr />
+<div >
+    <div class="border m-3 mt-4">
+        <form asp-action="Create" asp-controller="Category">
+            
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DisplayOrder" class="control-label"></label>
+                    <input asp-for="DisplayOrder" class="form-control" />
+                    <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a class="btn btn-light" asp-action="Index" asp-controller="Category">Back to List</a>
+                </div>
+        </form>
+    </div>
+</div>
+
+
